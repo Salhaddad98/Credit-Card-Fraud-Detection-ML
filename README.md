@@ -1,6 +1,7 @@
 # FraudX: Financial Fraud Detection
 
 Samsung Innovation Campus | Capstone Project
+
 📌 Overview
 
 FraudX is an advanced machine learning project designed to detect fraudulent credit card transactions.
