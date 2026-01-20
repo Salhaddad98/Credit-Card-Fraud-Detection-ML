@@ -1,111 +1,107 @@
 # FraudX: Financial Fraud Detection
 
-Samsung Innovation Campus | Capstone Project
+**Samsung Innovation Campus | Capstone Project**
 
-📌 Overview
+---
+
+## 📌 Overview
 
 FraudX is an advanced machine learning project designed to detect fraudulent credit card transactions.
-By leveraging state-of-the-art algorithms, the project provides a smart and adaptive solution to identify suspicious activities, minimize financial losses, and enhance customer trust in financial institutions.
+The project leverages state-of-the-art algorithms to identify suspicious activities, minimize financial losses, and enhance customer trust in financial institutions.
 
-🎯 Project Objectives
+---
 
-Accurate Fraud Detection:
-Build a predictive model capable of identifying suspicious transactions with high precision.
+## 🎯 Project Objectives
 
-Cost Optimization:
-Balance False Positives and False Negatives by optimizing decision thresholds to reduce financial impact.
+* **Accurate Fraud Detection:**
+  Build a predictive model capable of identifying suspicious transactions with high precision.
+* **Cost Optimization:**
+  Balance False Positives and False Negatives by optimizing decision thresholds to reduce financial impact.
+* **Enhanced Security:**
+  Provide a scalable and reliable tool to support financial institutions in improving risk management.
 
-Enhanced Security:
-Provide a scalable and reliable tool to support financial institutions in improving risk management.
+---
 
-🛠️ Tools & Technologies
+## 🛠️ Tools & Technologies
 
-Programming Language: Python
+* **Programming Language:** Python
+* **Libraries:** Pandas, NumPy, Scikit-learn, XGBoost
+* **Environment:** Google Colab
+* **Interface:** Gradio (interactive prototype)
 
-Libraries: Pandas, NumPy, Scikit-learn, XGBoost
+---
 
-Environment: Google Colab
+## 📊 Dataset & Preprocessing
 
-Interface: Gradio (interactive prototype)
+* **Source:** Credit Card Fraud Detection Dataset 2023 (Kaggle)
+* **Size:** 568,630 transactions
+* **Features:**
 
-📊 Dataset & Preprocessing
+  * 28 anonymized features (V1–V28)
+  * Transaction Amount
 
-Source: Credit Card Fraud Detection Dataset 2023 (Kaggle)
+### Data Processing Steps
 
-Size: 568,630 transactions
+* Removed non-predictive columns (e.g., `id`)
+* Standardized numerical features to improve model stability
+* Addressed class imbalance, a common challenge in fraud detection datasets
 
-Features:
+---
 
-28 anonymized features (V1–V28)
-
-Transaction Amount
-
-Data Processing Steps
-
-Removed non-predictive columns (e.g., id)
-
-Standardized numerical features to improve model stability
-
-Addressed class imbalance (a common challenge in fraud detection datasets)
-
-🤖 Model Selection & Training
+## 🤖 Model Selection & Training
 
 Two primary models were evaluated:
 
-1️⃣ Logistic Regression
+### Logistic Regression
 
-Used as a baseline model
+* Used as a baseline model
+* Provided performance benchmarks for comparison
 
-Provided performance benchmarks for comparison
+### XGBoost (Main Model)
 
-2️⃣ XGBoost (Main Model)
+* Selected for its ability to capture non-linear patterns and complex feature interactions
+* Optimized using **GridSearchCV** for hyperparameter tuning
+* Applied **Early Stopping** to prevent overfitting
 
-Selected for its ability to capture non-linear patterns and complex feature interactions
+---
 
-Optimized using GridSearchCV for hyperparameter tuning
-
-Applied Early Stopping to prevent overfitting
-
-📈 Results & Evaluation
+## 📈 Results & Evaluation
 
 Models were evaluated using metrics suitable for imbalanced datasets:
 
-PR-AUC
+* PR-AUC
+* ROC-AUC
+* F1-Score
 
-ROC-AUC
+The project successfully identified the optimal decision threshold (**t***), maximizing fraud detection while minimizing unnecessary transaction blocks.
 
-F1-Score
+---
 
-✅ The project successfully identified the optimal decision threshold (t*), maximizing fraud detection while minimizing unnecessary transaction blocks.
+## 🖥️ Interactive Prototype
 
-🖥️ Interactive Prototype (Gradio)
+A web-based interactive interface built with **Gradio**, allowing users to:
 
-A web-based interactive interface built with Gradio, allowing users to:
+* **Manual Entry:** Input values for V1–V28 and transaction amount
+* **Auto-load Transactions:** Select a transaction from the test dataset using a slider
+* **Real-time Analysis:** View fraud probability and final classification (Fraud or Legitimate)
 
-Manual Entry:
-Input values for V1–V28 and Amount manually
+---
 
-Auto-load Transactions:
-Select a transaction from the test dataset using a slider
+## 🚀 Future Improvements
 
-Real-time Analysis:
-Display fraud probability and final classification
-(Fraud or Legitimate) based on the optimized threshold
+* Experiment with alternative algorithms such as LightGBM and CatBoost
+* Deploy the model in real-time production environments with low-latency requirements
+* Incorporate additional behavioral or temporal features to improve detection accuracy
 
-🚀 Future Improvements
+---
 
-Model Expansion:
-Experiment with alternative algorithms such as LightGBM and CatBoost
+## 👥 Team Members
 
-Real-time Deployment:
-Test and deploy the model in live production environments with low-latency requirements
+* Samaha Alhaddad
+* Ghaida Alhazzaa
+* Rahaf Al-Zahrani
+* Leen Althunyan
+* Rahaf Almuslat
+* Amal Almutairi
 
-
-👥 Team Members
-
-Samaha Alhaddad
-Ghaida Alhazzaa
-Rahaf Al-Zahrani
-Leen Althunyan
-Rahaf Almuslat
-Amal Almutairi
+---
